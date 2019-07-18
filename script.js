@@ -5,6 +5,22 @@ class Stopwatch {
         this.reset();
         this.print(this.times);
     }
+
+    reset() {
+        this.times = {
+            minutes: 0,
+            seconds: 0,
+            miliseconds: 0
+        };
+    }
+
+    print() {
+        this.display.innerText = this.format(this.times);
+	}
+
+	format(times) {
+        return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
+	}
 }
 
 const stopwatch = new Stopwatch(
