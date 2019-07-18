@@ -6,6 +6,7 @@ class Stopwatch {
         this.print(this.times);
     }
 
+    // reset spotwatch
     reset() {
         this.times = {
             minutes: 0,
@@ -14,6 +15,7 @@ class Stopwatch {
         };
     }
 
+    // show stopwatch
     print() {
         this.display.innerText = this.format(this.times);
 	}
@@ -23,6 +25,16 @@ class Stopwatch {
 	}
 }
 
+// add 0 before one-digit number 
+function pad0(value) {
+    let result = value.toString();
+    if (result.length < 2) {
+        result = '0' + result;
+    }
+    return result;
+}
+
+// buttons click
 const stopwatch = new Stopwatch(
 document.querySelector('.stopwatch'));
 
