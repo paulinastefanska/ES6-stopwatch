@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+body {
+	margin: 40px auto;
+	font-family: 'Roboto Mono', monospace;
+	text-align: center;
+}
+.controls {
+	font-size: 20px;
+}
+.controls a {
+	margin: 35px;
+	text-decoration: none;
+	color: #000;
+	font-weight: 700;
+}
+.stopwatch {
+	font-size: 45px;
+}
